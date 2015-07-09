@@ -15332,7 +15332,7 @@ function MdTabs ($mdTheming, $mdUtil, $compile) {
               aria-labelledby="tab-item-{{tab.id}}"\
               md-swipe-left="swipeContent && $mdTabsCtrl.incrementSelectedIndex(1)"\
               md-swipe-right="swipeContent && $mdTabsCtrl.incrementSelectedIndex(-1)"\
-              ng-if="$mdTabsCtrl.hasContent"\
+              ng-show="$mdTabsCtrl.hasContent"\
               ng-repeat="(index, tab) in $mdTabsCtrl.tabs"\
               md-connected-if="tab.isActive()"\
               ng-class="{\
@@ -15345,7 +15345,7 @@ function MdTabs ($mdTheming, $mdUtil, $compile) {
             <div\
                 md-template="tab.template"\
                 md-scope="tab.parent"\
-                ng-if="tab.shouldRender()"></div>\
+                ng-show="tab.shouldRender()"></div>\
           </md-tab-content>\
         </md-tabs-content-wrapper>\
       ';
