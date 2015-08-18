@@ -17089,7 +17089,7 @@ function MdTabs () {
               aria-labelledby="tab-item-{{::tab.id}}"\
               md-swipe-left="$mdTabsCtrl.swipeContent && $mdTabsCtrl.incrementIndex(1)"\
               md-swipe-right="$mdTabsCtrl.swipeContent && $mdTabsCtrl.incrementIndex(-1)"\
-              ng-if="$mdTabsCtrl.hasContent"\
+              ng-show="$mdTabsCtrl.hasContent"\
               ng-repeat="(index, tab) in $mdTabsCtrl.tabs"\
               ng-class="{\
                 \'md-no-transition\': $mdTabsCtrl.lastSelectedIndex == null,\
@@ -17102,7 +17102,7 @@ function MdTabs () {
                 md-template="::tab.template"\
                 md-connected-if="tab.isActive()"\
                 md-scope="::tab.parent"\
-                ng-if="$mdTabsCtrl.enableDisconnect || tab.shouldRender()"></div>\
+                ng-show="$mdTabsCtrl.enableDisconnect || tab.shouldRender()"></div>\
           </md-tab-content>\
         </md-tabs-content-wrapper>\
       ';
